@@ -9,8 +9,10 @@
 
 
 <header>
+<section>
 	<h1><a href="#">Xumbo Team Sports</a></h1> 
-
+	<h1>srfsdfsdfsdfs</h1> 
+	</section>
 </header>
 
 	<nav><ul>
@@ -30,7 +32,7 @@ main
 
 
 <footer>
-Não esquecer top buton 
+<section>Não esquecer top buton </section>
 </footer>
 
 </body>
