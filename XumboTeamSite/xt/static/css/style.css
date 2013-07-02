@@ -1,91 +1,114 @@
 /* Makeshift CSS Reset */  
 {  
     margin: 0;  
-    padding: 0;  
+    padding: 0;
+	background-color: #cccccc;    
 }  
   
 /* Tell the browser to render HTML 5 elements as block */  
-header, footer, nav{  
+header, nav, aside, section, article,footer {  
     display: block;  
+}  
+
+html { 
+    background-color: #cccccc;  
+}
+body {  
+	background-color: #cccccc;  
+    margin: 0 auto;  
+    width: 900px;  
+    font: 13px/22px Helvetica, Arial, sans-serif;  	 
 } 
 
-
- body {  
-    margin: 0 auto;  
-    width: 940px;  
-    font: 13px/22px Helvetica, Arial, sans-serif;  
-    background: #f0f0f0;  
-}  
-  
-h2 {  
-    font-size: 28px;  
-    line-height: 44px;  
-    padding: 22px 0;  
-}  
-  
-h3 {  
-    font-size: 18px;  
-    line-height: 22px;  
-    padding: 11px 0;  
-}  
-  
-p {  
-    padding-bottom: 22px;  
-}  
-/***********NAVIGATOR************/
-
-    nav {  
-        position: absolute;  
-        width: 940px;  
-        background-color:#383838 ;  
-
-    }   
-
+    nav {
+		border-radius: 5px; 
+		height: 42px;   
+        width: 900px;
+        background-color: #000000;  
+    }  
     nav ul {  
-        margin: 0 auto;  
-        width: 940px;  
+		margin: 0 auto;
+        width: 900px;  
         list-style: none;  
     }  
-    nav ul li {  
-        float: left;  
+nav ul li {  
+   display:inline;
+}  
+  
+    nav ul li a {  
+		border-radius: 5px; 
+        font-size: 16px;  
+        line-height: 44px;  
+        text-align: center;  
+        text-decoration: none;  
+        color: #777;  
+		padding: 11px 25px 9px 25px
     }  
-      
-        nav ul li a {  
-            display: block;  
-            margin-right: 20px;  
-            width: 140px;  
-            font-size: 14px;  
-            line-height: 44px;  
-            text-align: center;  
-            text-decoration: none;  
-            color: #777;  
+  
+        nav ul li a:hover {  
+            color: #000;  
+			background: #fff;  
+			
         }  
-      
-            nav ul li a:hover {  
-                color: #fff;  
-            }  
-      
-            nav ul li.selected a {  
-                color: #fff;  
-            }  
-      
-            nav ul li.subscribe a {  
-                margin-left: 22px;  
-                padding-left: 33px;  
-                text-align: left;  
-                background: url("rss.png") left center no-repeat;  
-            }  
+  
+        nav ul li.selected a {  
+            color: #fff;  
+        }  
 
 
-/***********HEADER************/
+section {  
+	border-radius: 5px; 
+	margin: 0 auto;
+    width: 900px;  
+    font: 13px/22px  Arial, sans-serif;  
+    background-color: #aaaaaa;  
+} 
 
+section h1{  
+	font: 24px Helvetica, Arial, sans-serif;  
+	margin:0 auto;
+	clear:both;
+} 
 
+article {  
+	border-radius: 4px; 
+	margin: 10px 10px;  
+	padding: 10px 10px;  
+    width: 860px;  
+    font: 13px/22px Helvetica, Arial, sans-serif;  
+    background-color: #ffffff;  
+} 
+#art{
+	background-image: none;
+    width: auto; 
+	margin: 10px auto;
+    background-color: #ffffff;  
+	font: 22px/22px Helvetica, Arial, sans-serif;  
+	height:50px;
+}
 
+header {
+	-moz-border-radius: 5px; 
+	border-radius: 5px; 
+	height:200px;
+	margin: 0 auto;  
+    width: 900px;  
+    background-image:url('/static/xt.jpg');  
+	background-size: cover;
+    background-repeat: no-repeat;
+} 
+header h1{
+font-weight:bold;
+    font: 60px  Arial, sans-serif;  
+	color: white; 
+	margin: 0 auto; 
+	padding: 10px 10px; 
+} 
 
-
-/***********FOOTER************/
-
-
-
-
-
+footer{
+border-radius: 5px; 
+height:25px;
+text-align:center;
+background-color: #000000; 
+color: white; 
+}

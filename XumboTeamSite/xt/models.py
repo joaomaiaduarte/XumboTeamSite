@@ -1,6 +1,22 @@
+#!/usr/bin/python
+# -*- coding: utf8 -*-
+
 from django.db import models
 
-# Create your models here.
-class Poll(models.Model):
-    question = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+class Member(models.Model):
+    username = models.CharField(max_length=100)
+    name = models.CharField(max_length=200)
+    birthdate = models.DateField()
+    url = models.URLField()
+    email = models.EmailField()
+    photo = models.ImageField(upload_to='profile_images')
+    def __unicode__(self):
+        return unicode(self.username)
+    
+class News(models.Model):
+    title = models.CharField(max_length=100)
+    birthdate = models.DateTimeField('Data de publicação: ')
+    text = models.TextField()
+    def __unicode__(self):
+        return unicode(self.title)
+    
