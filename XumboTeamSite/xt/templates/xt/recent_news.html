@@ -2,15 +2,22 @@
 
 {% block content %}
 <h1>
-Início
+Noticias
 </h1>
-	
-	<article>
+		{% for n in news  %}	
+	<article >
+		<p>Data de publicação: {{ n.pub_date |date:"Y-m-d H:i:s" }} </p>
 		<header id=art>
-			Boas!
+			<p>{{ n.title }}</p>
 		</header>
-		A equipa Xumbo Team Sports....
 
+		<p>{{ n.text }}</p>
+
+
+		{% if n.image %}
+			<img src="{{ n.image.url }}" width=600px />
+		{% endif %}
 	</article>
+		{% endfor %}
 
 {% endblock %}

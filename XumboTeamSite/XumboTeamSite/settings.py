@@ -82,8 +82,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Media files 
 MEDIA_URL = '/media/'
 
-profile_images = '/profile_images/'
+MEDIA_ROOT=PROJECT_ROOT + '/media/'
+
+

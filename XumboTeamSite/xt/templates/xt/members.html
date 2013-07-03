@@ -2,15 +2,27 @@
 
 {% block content %}
 <h1>
-Início
+Membros
 </h1>
-	
-	<article>
+		{% for m in members  %}	
+	<article >
 		<header id=art>
-			Boas!
+			<p>{{ m.name }}</p>
 		</header>
-		A equipa Xumbo Team Sports....
+
+		<img src="{{ m.photo.url }}" width=300px />
+
+		<p>Data de nascimento: {{ m.birthdate |date:"d/m/Y" }} </p>
+
+		{% if m.url%}
+			<p>Sitio: {{ m.url|urlize }}</p>
+		{% endif %}
+
+		{% if m.email%}
+			<p>Email: {{ m.email |urlize }}</p>
+		{% endif %}
 
 	</article>
+		{% endfor %}
 
 {% endblock %}
