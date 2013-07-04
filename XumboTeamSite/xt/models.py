@@ -13,11 +13,17 @@ class Member(models.Model):
     def __unicode__(self):
         return unicode(self.name)
     
+class Image(models.Model):
+    photo = models.ImageField(upload_to='images', blank=True)
+    title=models.CharField(max_length=300, blank=True)
+    description=models.TextField(blank=True)
+    
 class News(models.Model):
     title = models.CharField(max_length=200)
     pub_date = models.DateTimeField('Data de publicação: ')
     text = models.TextField()
-    image = models.ImageField(upload_to='news_images', blank=True)
+    #images = models.ImageField(upload_to='news_images', blank=True)
+    images=models.ManyToManyField(Image)
     def __unicode__(self):
         return unicode(self.title)
     
