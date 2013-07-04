@@ -13,10 +13,14 @@ Noticias
 
 		<p>{{ n.text }}</p>
 
+		{% for i in n.images.all  %}	
 
-		{% if n.image %}
-			<img src="{{ n.image.url }}" width=600px />
-		{% endif %}
+			<h2>{{ i.title }}</h2>
+			<img src="{{ i.photo.url }}" width=600px />
+			<p> {{ i.description }}</p>
+		{% endfor %}
+
+
 	</article>
 		{% endfor %}
 
