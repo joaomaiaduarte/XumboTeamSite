@@ -26,7 +26,17 @@ class News(models.Model):
     title = models.CharField(max_length=200)
     pub_date = models.DateTimeField('Data de publicação: ')
     text = models.TextField()
-    images=models.ManyToManyField(Image)
+    images=models.ManyToManyField(Image) 
+    def __unicode__(self):
+        return unicode(self.title)
+    
+    
+class Event(models.Model):
+    name = models.CharField('Nome: ', max_length=200)
+    event_date = models.DateTimeField('Data do evento: ')
+    description = models.TextField('Descrição: ')
+    url = models.URLField(blank=True)
+    images=models.ManyToManyField(Image, 'Imagens: ')
     def __unicode__(self):
         return unicode(self.title)
     

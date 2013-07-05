@@ -10,7 +10,13 @@ Eventos Anteriores
 			Lista de eventos anteriores
 		</header>
 		
-		<p> Em desenvolvimento. <p>
+		{% for e in events  %}	
+
+			<h2>{{ e.name }}</h2>
+			<p> {{ e.event_date }}</p>
+			<p> {{ e.description }}</p>
+			<p> {{ e.url|urlize }}</p>
+		{% endfor %}
 
 	</article>
 

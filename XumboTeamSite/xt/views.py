@@ -1,6 +1,7 @@
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
-from xt.models import Member, News
+from xt.models import Member, News, Event
+from django.utils import timezone
 
 def index(request):
     return render(request, 'xt/index.html')
@@ -17,7 +18,9 @@ def track_list(request):
     return render(request, 'xt/track_list.html')
 
 def next_events(request):
+    #return select next events, ordered by proximity
     return render(request, 'xt/next_events.html')
 
 def past_events(request):
-    return render(request, 'xt/past_events.html')
+    events = Event.objects.filter(event_date=timezone.now()).order_by('-event_date');
+    return render_to_response('xt/past_events.html', {'events' : events}, context_instance=RequestContext(request))
